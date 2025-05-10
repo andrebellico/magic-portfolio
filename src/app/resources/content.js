@@ -1,46 +1,28 @@
-import { Logo } from "@/once-ui/components";
-
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "André",
+  lastName: "Bellico",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Desenvolvedor",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "mhsandrevsbellico@gmail.com",
+  location: "America/Brasil", 
+  languages: ["English", "Portuguese"], 
 };
 
-const newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: (
-    <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
-    </>
-  ),
-};
+
 
 const social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/andrebellico",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "X",
-    icon: "x",
-    link: "",
+    link: "https://www.linkedin.com/in/andr%C3%A9-bellico/",
   },
   {
     name: "Email",
@@ -55,24 +37,23 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Conectando design e código com propósito</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
+    title: <>Ultimo projeto: <strong className="ml-4">Async LP</strong></>,
     href: "/work/building-once-ui-a-customizable-design-system",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon={false} style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+   Sou André Bellico, desenvolvedor web com foco em criar interfaces modernas e intuitivas. Apaixonado por tecnologia, busco desafios que me ajudem a evoluir e construir soluções inovadoras.
     </>
   ),
 };
 
 const about = {
   path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
+  label: "Sobre",
+  title: `Sobre – ${person.name}`,
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,
@@ -87,35 +68,45 @@ const about = {
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "Introdução",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+       Profissional apaixonado por tecnologia, atuando na área de desenvolvimento desde 2023. Possuo
+sólidos conhecimentos em lógica de programação.
+Tenho experiência com desenvolvimento front-end utilizando React.js, TypeScript, CSS e integração
+com APIs. Além disso, estou familiarizado com MySQL e Node.js, o que me permite colaborar em
+soluções full-stack.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Experiência de Trabalho",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "ASYNC",
+        timeframe: "2023 - Presente",
+        role: "Desenvolvedor",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Participei ativamente no desenvolvimento dos sistemas conforme as necessidades dos clientes, em conjunto com
+a equipe.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+           Participei da criação dos designs dos sistemas e projetos dos clientes
+          </>,
+          <>
+            Desenvolvemos um sistema para automatizar o processo de escolha de personalizações de arquitetura de uma
+forma intuitiva e interativa (PLANA ADHOC).
+          </>,
+          <>
+            Realizei a conversão pixel-perfect dos designs do Figma para os websites.
+          </>,
+          <>
+            Gerenciando o fluxo do Git, mantendo o projeto organizado e seguindo as melhores práticas na base de código
           </>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
             src: "/images/projects/project-01/cover-01.jpg",
             alt: "Once UI Project",
@@ -124,73 +115,47 @@ const about = {
           },
         ],
       },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
-      },
+   
     ],
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Formação",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Universidade Católica Italo Brasileiro",
+        description: <>Análise e Desenvolvimento de Sistemas</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "RocketSeat",
+        description: <>Front-End Curso</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true, 
+    title: "Tech Skills",
     skills: [
       {
         title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
       },
       {
         title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+      },
+      {
+        title: "React.js",
+      },
+      {
+        title: "TailwindCSS",
+      },
+      {
+        title: "TypeScript",
+      },
+      {
+        title: "Node.js",
+      },
+      {
+        title: "MySQL",
       },
     ],
   },
@@ -265,4 +230,4 @@ const gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, home, about, blog, work, gallery };
